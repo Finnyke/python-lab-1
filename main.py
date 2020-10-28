@@ -2,11 +2,7 @@
 #Maxim Pupykin, group 6312
 
 import re
-import os
-
 correct_numbers = []
-if not os.path.exists("correct-numbers.txt"):
-    os.mkdir("correct-numbers.txt")
 
 with open("phone-numbers.txt", "r") as numbers:
     input_string = numbers.read()
