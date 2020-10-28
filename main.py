@@ -21,7 +21,4 @@ with open("phone-numbers", "r") as numbers:
 
 with open("correct-numbers", "w") as numbers:
     for number in correct_numbers:
-        if number[len(number)-1] == '\n':
-            numbers.write(number)
-        else:
-            numbers.write(number + "\n")
+        numbers.write(number)
