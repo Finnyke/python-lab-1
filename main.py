@@ -2,8 +2,6 @@
 #Maxim Pupykin, group 6312
 
 import re
-import os
-
 correct_numbers = []
 
 with open("phone-numbers.txt", "r") as numbers:
