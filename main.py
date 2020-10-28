@@ -2,6 +2,8 @@
 #Maxim Pupykin, group 6312
 
 import re
+import os
+
 correct_numbers = []
 
 with open("phone-numbers.txt", "r") as numbers:
@@ -22,6 +24,9 @@ for number in input_numbers:
     elif re.fullmatch(r"\+?7(?:-\d{3}-\d{3}-\d{2}-|\d{8})\d{2}\D?", number):
         correct_numbers.append(number)
 
-with open("correct-numbers.txt", "w") as numbers:
-    for number in correct_numbers:
-        numbers.write(number + "\n")
+numbers = open("correct-numbers.txt", "w")
+
+for number in correct_numbers:
+    numbers.write(number + "\n")
+
+numbers.close()
