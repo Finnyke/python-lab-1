@@ -25,4 +25,3 @@ with open("correct-numbers", "w") as numbers:
             numbers.write(number)
         else:
             numbers.write(number + "\n")
-
