@@ -1,5 +1,5 @@
-#LAB 1, VARIANT 4
-#Maxim Pupykin, group 6312
+# LAB 1, VARIANT 4
+# Maxim Pupykin, group 6312
 
 import re
 correct_numbers = []
@@ -9,9 +9,7 @@ with open("phone-numbers.txt", "r") as numbers:
 input_numbers = re.split(r"[^0-9+\-()]", input_string)
 
 for number in input_numbers:
-    if re.fullmatch(r"9\d{2}(?:-\d{3}-\d{2}-|\d{5})\d{2}", number):
-        correct_numbers.append(number)
-    elif re.fullmatch(r"\(9\d{2}\)\d{3}(?:-\d{2}-|\d{2})\d{2}", number):
+    if re.fullmatch(r"(9\d{7}|\(9\d{2}\)\d{3}(?:-\d{2}-|\d{2})|9\d{2}-\d{3}-\d{2}-)\d{2}", number):
         correct_numbers.append(number)
     elif re.fullmatch(r"(?:8|\+?7)(\d{8}|\(\d{3}\)\d{3}(?:-\d{2}-|\d{2})|-\d{3}-\d{3}-\d{2}-)\d{2}", number):
         correct_numbers.append(number)
