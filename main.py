@@ -13,9 +13,7 @@ for number in input_numbers:
         correct_numbers.append(number)
     elif re.fullmatch(r"\(9\d{2}\)\d{3}(?:-\d{2}-|\d{2})\d{2}", number):
         correct_numbers.append(number)
-    elif re.fullmatch(r"(?:8|\+?7)\(\d{3}\)\d{3}(?:-\d{2}-|\d{2})\d{2}", number):
-        correct_numbers.append(number)
-    elif re.fullmatch(r"(?:8|\+?7)(?:-\d{3}-\d{3}-\d{2}-|\d{8})\d{2}", number):
+    elif re.fullmatch(r"(?:8|\+?7)(\d{8}|\(\d{3}\)\d{3}(?:-\d{2}-|\d{2})|-\d{3}-\d{3}-\d{2}-)\d{2}", number):
         correct_numbers.append(number)
 
 numbers = open("correct-numbers.txt", "w")
