@@ -6,7 +6,7 @@ correct_numbers = []
 
 with open("phone-numbers.txt", "r") as numbers:
     input_string = numbers.read()
-input_numbers = re.split(r"[^(0-9|\+|\-|\(|\))]", input_string)
+input_numbers = re.split(r"[^0-9+\-()]", input_string)
 
 for number in input_numbers:
     if re.fullmatch(r"9\d{2}(?:-\d{3}-\d{2}-|\d{5})\d{2}", number):
